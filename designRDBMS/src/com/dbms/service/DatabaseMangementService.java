@@ -66,4 +66,18 @@ public class DatabaseMangementService {
         return tables.get(name).getRowsList();
     }
 
+    public void createIndex(String table, String header) throws Exception {
+        if(!tables.containsKey(table)) {
+            throw new Exception("Table name doesn't exists");
+        }
+        tables.get(table).createIndex(header);
+    }
+
+    public Map<Header, Map<Object, Integer>> getAllIndexes(@NonNull final String table) throws Exception {
+        if(!tables.containsKey(table)) {
+            throw new Exception("Table name doesn't exists");
+        }
+        return tables.get(table).getIndexes();
+    }
+
 }

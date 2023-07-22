@@ -6,6 +6,7 @@ import com.dbms.service.DatabaseMangementService;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Map;
 
 public class Runner {
     public static void main(String[] args) throws Exception {
@@ -19,8 +20,13 @@ public class Runner {
                         new Header("Age", Header.DataType.INT, false, Header.Constraint.INT_RANGE_1024))
         );
         Table employeeDetails = dmservice.createTable("EmployeeDetails", headers);
-        employeeDetails.insertRowIntoTable(Arrays.asList(1, null, "Lohia", 26));
+        employeeDetails.insertRowIntoTable(Arrays.asList(1, "Rohit", "Lohia", 26));
         employeeDetails.insertRowIntoTable(Arrays.asList(2, "Mohit", "Lohia", 22));
+        employeeDetails.insertRowIntoTable(Arrays.asList(4, "Pohit", "Lohia", 23));
+        employeeDetails.insertRowIntoTable(Arrays.asList(5, "Sohit", "Lohia", 24));
+        employeeDetails.insertRowIntoTable(Arrays.asList(10, "Dohit", "Lohia", 27));
+        dmservice.createIndex("EmployeeDetails", "Emp_ID");
+        System.out.println(dmservice.getAllIndexes("EmployeeDetails").toString());
         System.out.println("Table looks like: \n" + employeeDetails);
         employeeDetails.deleteRowWithRowId(1);
         System.out.println(employeeDetails.getRowsList());

@@ -1,7 +1,13 @@
-ALL:: https://github.com/prasadgujar/low-level-design-primer/blob/master/solutions.md
-CACHE: https://github1s.com/anomaly2104/cache-low-level-system-design/tree/master
-
-
+- ALL:: https://github.com/prasadgujar/low-level-design-primer/blob/master/solutions.md
+- CACHE: https://github1s.com/anomaly2104/cache-low-level-system-design/tree/master
+- Document DB: https://leetcode.com/discuss/interview-question/1630474/razorpay-machine-coding-round-document-service-design
+ _
+-| Video Streaming
+-| Parking Lot **
+-| True Caller
+-| Pub-Sub
+ -https://github.com/Prakash-Jha-Dev/SystemDesign
+Database Internals
 Designing a notification system with multiple channels and handling failures requires a robust and fault-tolerant 
 architecture. Here's a high-level design for the notification system:
 
